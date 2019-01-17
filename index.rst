@@ -10,5 +10,7 @@ Welcome to GoVSPython's !
    :maxdepth: 2
 
    maindifferences
-   functions
    main
+   functions
+   classes
+   lists_dicts
