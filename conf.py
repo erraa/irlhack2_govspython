@@ -39,7 +39,7 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
+    'sphinx.ext.autodoc'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -96,7 +96,7 @@ html_static_path = ['_static']
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-# html_sidebars = {}
+#html_sidebars = {}
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

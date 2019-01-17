@@ -3,7 +3,7 @@ Main Differences
 ==================
 
 Execution
-+++++++++
+++++++++++++++++++++++
 
 **Python**
 ____________
@@ -17,7 +17,7 @@ ____________
 
 
 Object Orientation
-+++++++++
+++++++++++++++++++++++
 
 **Python**
 
@@ -28,7 +28,6 @@ Python is very much like the traditional OOP languages. Python classes have ever
 Go does not have classes, but instead, just like C we have structs and custom types
 
 Static vs Dynamic
-+++++++++
 
 **Python**
 
@@ -43,7 +42,7 @@ Go is statically typed::
    var mystring string = "Hej!"
 
 Concurreny
-++++++++++
+++++++++++++++++++++++
 
 **Python**
 

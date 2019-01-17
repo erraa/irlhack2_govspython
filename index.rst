@@ -14,3 +14,4 @@ Welcome to GoVSPython's !
    functions
    classes
    lists_dicts
+   imports

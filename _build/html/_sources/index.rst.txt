@@ -13,3 +13,5 @@ Welcome to GoVSPython's !
    main
    functions
    classes
+   lists_dicts
+   imports
