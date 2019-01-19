@@ -1,0 +1,3 @@
+Q1: Namnge de 3 sätten som man kan få concurreny (samtidighet) i python
+
+Q2: Vilket Gopaket behover man importera for att kunna printa?

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Imports and Pip vs Go get &mdash; GoVSPython  documentation</title>
+  <title>Loops &mdash; GoVSPython  documentation</title>
   
 
   
@@ -31,6 +31,7 @@
 
   
     <link rel="top" title="GoVSPython  documentation" href="index.html"/>
+        <link rel="next" title="Functions" href="functions.html"/>
         <link rel="prev" title="Lists and Dicts" href="lists_dicts.html"/> 
 
   
@@ -79,10 +80,15 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="maindifferences.html">Main Differences</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main.html">Main</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lists_dicts.html">Lists and Dicts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#opening-words">Opening words</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classes.html">Classes Vs Structs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lists_dicts.html">Lists and Dicts</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Imports and Pip vs Go get</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imports.html">Imports and Pip vs Go get</a></li>
 </ul>
 
             
@@ -113,11 +119,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Imports and Pip vs Go get</li>
+    <li>Loops</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/imports.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/loops.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -127,30 +133,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="imports-and-pip-vs-go-get">
-<h1>Imports and Pip vs Go get<a class="headerlink" href="#imports-and-pip-vs-go-get" title="Permalink to this headline">¶</a></h1>
-<p>Imports in Go and Python are very similar, but go really encourages an imformative way of importing.</p>
-<p><strong>Python</strong></p>
-<p>Pip3 install:</p>
-<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">requests</span>
+  <div class="section" id="loops">
+<h1>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="opening-words">
+<h2>Opening words<a class="headerlink" href="#opening-words" title="Permalink to this headline">¶</a></h2>
+<p>Loops in python and go are very similar. In Python we have both while loops and for loops,
+but in go we only have for loops. For loops in go are very similar to while loops in python.
+The range keyword also makes go&#8217;s for loops quite similar to pythons for loops.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Loop forever in Python:</p>
+<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Looping&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>importing:</p>
-<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">json</span>
+<p>Loop forever in Go:</p>
+<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s2">&quot;Looping&quot;</span><span class="p">)</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p><strong>Golang</strong></p>
-<p>go get:</p>
-<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="n">go</span> <span class="n">get</span> <span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">gorilla</span><span class="o">/</span><span class="n">mux</span>
+<p>Iterate over list in Python:</p>
+<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">mylist</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>importing:</p>
-<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
-    <span class="s2">&quot;fmt&quot;</span>
-    <span class="s2">&quot;github.com/gorilla/mux&quot;</span>
-<span class="p">)</span>
+<p>Iterate over slice in Go:</p>
+<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">element</span> <span class="p">:</span><span class="o">=</span> <span class="nb">range</span> <span class="n">myslice</span> <span class="p">{</span>
+     <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s2">&quot;element&quot;</span><span class="p">)</span>
+ <span class="p">}</span>
 </pre></div>
+</div>
+<p>Count to ten in Python:</p>
+<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Count to ten in Go:</p>
+<div class="highlight-python3"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">:</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">{</span>
+    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -160,6 +185,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="functions.html" class="btn btn-neutral float-right" title="Functions" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="lists_dicts.html" class="btn btn-neutral" title="Lists and Dicts" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
